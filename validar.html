@@ -2,24 +2,33 @@
     <head>
         <title>Validar</title>
         <script>
-            var nome = prompt("diga um nome", "Geovana")
-            var sobrenome = prompt("diga um sobrenome"," Munzlinger")
-            var nomeCompleto = nome + " " + sobrenome
-            var tamanhoDoNome = nomeCompleto.length
-            var txt = nomeCompleto + " /n tem tamanho de " + tamanhoDoNome
-            
-            var resposta = confirm("nome está certo?")
-            if(resposta == true){
-                imprimir(txt)
-            }else{
-                imprimir("deu ruim")
-            }
+                var nome = prompt("diga um nome", "Geovana")
+                var sobrenome = prompt("diga um sobrenome"," Munzlinger")
+                var nomeCompleto = nome + " " + sobrenome
+                var tamanhoDoNome = nomeCompleto.length
+                var txt = nomeCompleto + " tem tamanho de " + tamanhoDoNome
+                
+                var resposta = confirm("nome está certo?")
+                if(resposta == true){
+                    imprimir(txt)
+                }else{
+                    imprimir("deu ruim")
+                }
 
             function imprimir(texto){
                     console.log(texto)
             alert(texto)
             document.writeln(texto)
             }
+
+            function trabalhandoNúmeros(){
+                var n1 = prompt("diga um número")
+                var n2 = 5
+                var total = parseInt(n1) + n2
+                imprimir(total)
+            }
+
+            trabalhandoNúmeros()
         </script>
     </head>
     <body>
