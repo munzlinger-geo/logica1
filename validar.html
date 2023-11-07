@@ -1,5 +1,6 @@
 <html>
-    <head><title>Titulo</title>
+    <head><title>Validar</title>
+        <script type="text/javascript" src="js/myscript.js"></script>
         <script>
             function trabalhandoNome() {
                 var nome = prompt("Diga um nome", "Geovana")
@@ -20,26 +21,40 @@
             }
 
             function trabalhandoNúmeros() {
-                var num1 = prompt("diga um número", 10.3)
-                var num2 = 5
-                var total = parseFloat(num1) + num2
-                alert("total = " + total)
+                var n1 = prompt("diga um número", 10.3)
+                var n2 = 5
+                var total = parseInt(n1) + n2
+                alert(total)
             }
            
-            trabalhandoNúmeros()
-            imprimir("a"== "A")
-
+            function maiuscula(){
+                var email = gebi ("idEmail").value
+                var emailMaiuscula = email.toUpperCase()
+                gebi("idEmail").value = emailMaiuscula
+            }
+            function maiuscula(){
+                var email = gebi("idEmail").value
+                gebi("idEmail").value = email.toUpperCase()
+            }
             function validar(){
-				var email = gebi("idEmail").value; 
-				var senha = gebi("idSenha").value;
-			}
-			function maiuscula(){
-				var email = gebi("idEmail").value;
-				gebi("idEmail").value = email.toUpperCase();
-			}
+				var email = gebi("idEmail").value
+				var senha = gebi("idSenha").value
+           
+                if(email.lenght < 1){
+                    alert("preencha o e-mail")
+                    return
+                }
+
+                if(senha.lenght < 1){
+                    alert("preencha a senha")
+                    return
+                }
+            }
+            alert("sucesso!")
+            gebi("meuForm").submit()
+         
         </script>        
-		<script type="text/javascript" src="js/myscript.js"></script>
-		</head>
+	</head>
     <body>        
         <center>
             <h1>Validar</h1>
