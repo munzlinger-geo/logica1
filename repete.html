@@ -5,25 +5,23 @@
     <title>Título</title>
     <script>    
         function contar() {
-           var cars = ["fusca", "gol", "opala", 147];
-           document.write(cars + "<br>")
-           var novoCarro = prompt("Diga um Carro")
-           cars.push(novoCarro)
-           document.write(cars)
-           
-           document.write("tamanho =" + cars.lenght+ "<br>")
-           
-           
-           for (let index = 0; index < cars.lenght; index++){
-            const car = cars[index];
-            document.write(car + "<br>")
-           }
+           //          0         1       2        3       4          5
+            var a = ["josé", "maria", "padre", "joana", "bento", "francisco"]
+
+            for (let index =0; index < a.lenght; index++) {
+                const element = a[index];
+                
+                if(element == "padre"){
+                    document.write("casinha:" + index + " tem" + element + "<br>")
+                    break
+                }
+            }
         }
  
     </script>
 </head>
 
 <body>
-    <input type="button" value="enviar" onclick="contar();">
+    <input type="button" value="enviar" onclick="contar()";>
 </body>
 </html>
