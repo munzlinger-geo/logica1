@@ -16,6 +16,13 @@
                     break
                 }
             }
+            var quem = prompt("Diga um nome")
+            var ondeEsta = a.indexOf(quem)
+            if(ondeEsta != -1){
+                document.write("casinha" + ondeEsta + " tem " + quem + "<br>")
+            }else{
+                document.write("não achei" + quem)
+            }
         }
  
     </script>
