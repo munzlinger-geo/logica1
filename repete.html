@@ -19,16 +19,34 @@
             var quem = prompt("Diga um nome")
             var ondeEsta = a.indexOf(quem)
             if(ondeEsta != -1){
-                document.write("casinha" + ondeEsta + " tem " + quem + "<br>")
+                document.write("casinha " + ondeEsta + " tem " + quem + "<br>")
+                a.splice(ondeEsta,1)
             }else{
                 document.write("não achei" + quem)
             }
+            document.write("alterado =" + a)
         }
- 
+        function exercicio() {
+            const n = prompt("diga o limite")
+            const array = []
+            for (let index = 0; index <= n; index++){
+                array.push(index)
+            }
+
+            document.write("original: " + array + "<br>")
+            document.write("<hr>")
+
+            const remove = parseInt(prompt("digite um dos números para remover"))
+            if(remove !== -1){
+                array.splice(remove,1)
+            }
+
+            document.write("removido:" + array + "<br>")
+        }
     </script>
 </head>
 
 <body>
-    <input type="button" value="enviar" onclick="contar()";>
+    <input type="button" value="enviar" onclick="exercicio()";>
 </body>
 </html>
