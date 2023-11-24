@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Média</title>
+    <script src="js/myscript.js" type="text/javascript"></script>
+    <link href="css/estilos.css">
+    <script>
+        function media() {
+            var medias = [];
+            var m1 = prompt("Diga sua média do primeiro trimestre");
+            var m2 = prompt("Diga sua média do segundo trimestre");
+
+            medias[0] = m1;
+            medias[1] = m2;
+
+            var somatoria = 0.0;
+            for (var index = 0; index < medias.length; index++){
+                var nota = medias[index];
+                somatoria = somatoria + parseFloat(nota);
+            }
+
+            var m3 = 18.0 - somatoria;
+            if (m3 < 10.0){
+                alert("você precisa alcançar " + m3);
+            }else {
+                alert ("Não deu. Precisa de " + m3 + " Está reprovado!");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="media()">+</button>
+</body>
+</html>
